@@ -5,6 +5,8 @@ import sun.misc.Unsafe;
 import java.lang.reflect.Field;
 
 /**
+ * 2.4.4 本机直接内存溢出
+ *
  * VM Args：-Xmx20M -XX:MaxDirectMemorySize=10M
  *
  * @author zzm

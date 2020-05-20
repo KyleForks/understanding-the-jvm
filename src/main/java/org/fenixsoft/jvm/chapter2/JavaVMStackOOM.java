@@ -1,6 +1,8 @@
 package org.fenixsoft.jvm.chapter2;
 
 /**
+ * 2.4.2 虚拟机栈与本地方法栈溢出
+ *
  * VM Args：-Xss2M （这时候不妨设大些，请在32位系统下运行）
  *
  * @author zzm

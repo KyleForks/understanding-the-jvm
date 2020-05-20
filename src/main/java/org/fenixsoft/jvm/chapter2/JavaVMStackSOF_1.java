@@ -1,6 +1,7 @@
 package org.fenixsoft.jvm.chapter2;
 
 /**
+ * 2.4.2 虚拟机栈与本地方法栈溢出
  * VM Args：-Xss128k
  *
  * @author zzm

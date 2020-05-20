@@ -7,6 +7,8 @@ import net.sf.cglib.proxy.MethodProxy;
 import java.lang.reflect.Method;
 
 /**
+ * 2.4.3 方法区和运行时常量池溢出
+ *
  * VM Args： -XX:PermSize=10M -XX:MaxPermSize=10M
  *
  * @author zzm
@@ -19,6 +21,7 @@ public class JavaMethodAreaOOM {
             enhancer.setSuperclass(OOMObject.class);
             enhancer.setUseCache(false);
             enhancer.setCallback(new MethodInterceptor() {
+                @Override
                 public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
                     return proxy.invokeSuper(obj, args);
                 }

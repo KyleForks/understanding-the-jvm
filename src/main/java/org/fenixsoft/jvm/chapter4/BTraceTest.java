@@ -16,7 +16,7 @@ public class BTraceTest {
     public static void main(String[] args) throws IOException {
         BTraceTest test = new BTraceTest();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 1000; i++) {
             reader.readLine();
             int a = (int) Math.round(Math.random() * 1000);
             int b = (int) Math.round(Math.random() * 1000);
@@ -27,7 +27,7 @@ public class BTraceTest {
 
 /* BTrace Script Template
 import com.sun.btrace.annotations.*;
-        import static com.sun.btrace.BTraceUtils.*;
+import static com.sun.btrace.BTraceUtils.*;
 
 @BTrace
 public class TracingScript {
@@ -37,7 +37,7 @@ public class TracingScript {
             location=@Location(Kind.RETURN)
     )
 
-    public static void func(@Self org.fenixsoft.monitoring.BTraceTest instance,int a,int b,@Return int result) {
+    public static void func(@Self org.fenixsoft.jvm.chapter4.BTraceTest instance,int a,int b,@Return int result) {
         println("调用堆栈:");
         jstack();
         println(strcat("方法参数A:",str(a)));

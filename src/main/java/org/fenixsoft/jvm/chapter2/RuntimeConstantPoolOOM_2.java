@@ -1,5 +1,8 @@
 package org.fenixsoft.jvm.chapter2;
 
+/**
+ * 2.4.3 方法区和运行时常量池溢出
+ */
 public class RuntimeConstantPoolOOM_2 {
 
     public static void main(String[] args) {
